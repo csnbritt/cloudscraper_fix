@@ -328,6 +328,7 @@ class Cloudflare():
     # ------------------------------------------------------------------------------- #
 
     def Challenge_Response(self, resp, **kwargs):
+        time.sleep(self.cloudscraper.delay)
         if self.is_Captcha_Challenge(resp):
             # ------------------------------------------------------------------------------- #
             # double down on the request as some websites are only checking
